@@ -53,6 +53,19 @@ A modern, fully responsive **vehicle repair service platform** built with **Reac
 │   ├── hooks       # Custom React hooks
 │   └── App.tsx     # Main app entry point
 ```
+## 🖼 **Screenshots**  
+
+### **🔍 Homepage**
+![Screenshot 2025-03-12 113730](https://github.com/user-attachments/assets/4dd6a24a-900e-4535-a4ff-fd520f791073)
+
+
+### **🛠 Find a Mechanic Page**
+![Screenshot 2025-03-12 113755](https://github.com/user-attachments/assets/71de370e-a886-4dad-bdae-291c35599d4b)
+
+
+### **🆘 Emergency SOS Feature**
+![Emergency SOS](https:/![Screenshot 2025-03-12 113812](https://github.com/user-attachments/assets/0ac25f23-d675-4c61-90ba-15a46dc646c9)
+
 
 ## 🔧 Installation & Setup
 1. **Clone the repository**
