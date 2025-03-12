@@ -8,7 +8,6 @@ import TrackService from "./components/TrackService";
 import Footer from "./components/Footer";
 import EmergencySOS from "./components/EmergencySOS";
 import Chatbot from "./components/Chatbot";
-import { Phone, MessageSquare } from "lucide-react";
 
 
 function App() {

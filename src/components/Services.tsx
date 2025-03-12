@@ -11,6 +11,7 @@ interface Service {
 
 const Services: React.FC = () => {
   const [activeService, setActiveService] = useState<number | null>(null);
+  const [message, setMessage] = useState<string | null>(null);
 
   const services: Service[] = [
     {
@@ -101,6 +102,16 @@ const Services: React.FC = () => {
     }
   };
 
+  const handleBookService = (serviceTitle: string) => {
+    setMessage(`Your request for ${serviceTitle} has been submitted.`);
+    setTimeout(() => setMessage(null), 3000); // Clear the message after 3 seconds
+  };
+
+  const handleRequestCustomService = () => {
+    setMessage("Your request for a custom service has been submitted.");
+    setTimeout(() => setMessage(null), 3000); // Clear the message after 3 seconds
+  };
+
   return (
     <section id="services" className="py-20 bg-primary-black">
       <div className="container mx-auto px-4">
@@ -164,7 +175,10 @@ const Services: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  <button className="w-full mt-4 bg-neon-yellow text-primary-black py-2 rounded-md hover:bg-opacity-90 transition-colors duration-200">
+                  <button
+                    className="w-full mt-4 bg-neon-yellow text-primary-black py-2 rounded-md hover:bg-opacity-90 transition-colors duration-200"
+                    onClick={() => handleBookService(service.title)}
+                  >
                     Book Service
                   </button>
                 </div>
@@ -177,10 +191,19 @@ const Services: React.FC = () => {
           <p className="text-gray-300 mb-6">
             Need a service not listed here? We can help with that too!
           </p>
-          <button className="bg-deep-green text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-200 glow">
+          <button
+            className="bg-deep-green text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-200 glow"
+            onClick={handleRequestCustomService}
+          >
             Request Custom Service
           </button>
         </div>
+
+        {message && (
+          <div className="text-center mt-6">
+            <p className="text-neon-yellow font-medium">{message}</p>
+          </div>
+        )}
       </div>
     </section>
   );

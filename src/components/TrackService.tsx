@@ -4,10 +4,12 @@ import { Search, Clock, CheckCircle, Truck, PenTool as Tool, ThumbsUp, ChevronRi
 const TrackService: React.FC = () => {
   const [trackingId, setTrackingId] = useState("");
   const [isTracking, setIsTracking] = useState(false);
+  const [storedTrackingId, setStoredTrackingId] = useState<string | null>(null);
 
   const handleTrack = () => {
     if (trackingId.trim()) {
       setIsTracking(true);
+      setStoredTrackingId(trackingId);
     }
   };
 
@@ -96,7 +98,7 @@ const TrackService: React.FC = () => {
             <div className="bg-dark-gray rounded-lg p-6 shadow-lg slide-in">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 pb-6 border-b border-gray-700">
                 <div>
-                  <h3 className="text-xl font-bold">Service #MFP-2025-8742</h3>
+                  <h3 className="text-xl font-bold">Service #{storedTrackingId}</h3>
                   <p className="text-gray-400">Battery Jumpstart Service</p>
                 </div>
                 <div className="mt-4 md:mt-0 flex items-center bg-deep-green/20 px-3 py-1 rounded-md">

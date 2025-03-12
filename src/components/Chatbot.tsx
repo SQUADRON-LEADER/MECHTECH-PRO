@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { MessageSquare, Send, X, Mic, Paperclip, ChevronDown, Globe } from "lucide-react";
+import { MessageSquare, Send, X, Mic, Paperclip, Globe } from "lucide-react";
 
 interface Message {
   id: string;
@@ -79,6 +79,46 @@ const Chatbot: React.FC = () => {
         {
           text: "You can track your service using the tracking ID that will be sent to your phone once the mechanic is dispatched.",
           quickReplies: ["Track service", "Cancel service"],
+        },
+        {
+          text: "Sure, I can help you book a service. What type of service do you need?",
+          quickReplies: ["Oil Change", "Brake Service", "Tire Change"],
+        },
+        {
+          text: "You can contact our support team at support@mechfixpro.com or call us at (123) 456-7890.",
+          quickReplies: ["Email Support", "Call Support"],
+        },
+        {
+          text: "Our mechanics are available 24/7. Would you like to book a service now?",
+          quickReplies: ["Book Now", "Later"],
+        },
+        {
+          text: "We offer a variety of services including engine repair, tire change, and oil change. Which service are you interested in?",
+          quickReplies: ["Engine Repair", "Tire Change", "Oil Change"],
+        },
+        {
+          text: "You can view our pricing plans on our website. Would you like me to open the pricing page for you?",
+          quickReplies: ["Yes, open pricing", "No, thanks"],
+        },
+        {
+          text: "Our mechanics are highly trained and certified. Would you like to know more about their qualifications?",
+          quickReplies: ["Yes, tell me more", "No, thanks"],
+        },
+        {
+          text: "We have a satisfaction guarantee policy. If you're not satisfied with the service, we'll make it right. Would you like to know more?",
+          quickReplies: ["Yes, tell me more", "No, thanks"],
+        },
+        {
+          text: "You can schedule a service at your convenience. What date and time works best for you?",
+          quickReplies: ["Today", "Tomorrow", "Next Week"],
+        },
+        {
+          text: "We offer emergency services as well. Do you need immediate assistance?",
+          quickReplies: ["Yes, I need help now", "No, it's not urgent"],
+        },
+        {
+          text: "Would you like to receive updates about your service via SMS or email?",
+          quickReplies: ["SMS", "Email"],
         },
       ];
 
